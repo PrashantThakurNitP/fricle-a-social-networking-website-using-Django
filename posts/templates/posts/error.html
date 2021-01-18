@@ -1,0 +1,441 @@
+
+
+
+
+
+
+
+{% extends 'posts/base.html' %}
+
+{% block content %}
+<style type="text/css">
+
+
+
+body {
+  background-image: url('https://cdn.dribbble.com/users/722246/screenshots/11096994/media/abcf2fe91c135bbaec19a3816dd0a992.gif');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;
+  margin-top: 0vw;
+}
+/*
+
+  #b1
+{
+      font-family: 'Permanent Marker', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Great Vibes', cursive;
+}
+#s2
+{
+    height: 60vw;
+    width :70vw;
+    margin-left: 0vw;
+    margin-right: auto;
+  }
+  #s1
+  {
+
+
+    margin-left: 5vw;
+    margin-right:   auto;
+    width :75vw;
+  }
+  #s3
+  {
+    margin-left: 0vw;
+
+    width: 160vw;
+
+  }*/
+  .flex_body{
+    
+    display: flex;
+    margin-top: auto;
+    margin-left: -15vw;
+    
+     
+     
+
+  }
+
+.flex-container_h1{
+    
+    display: flex;
+    margin-top: -8vh;
+    margin-left: 15vw;
+    width: auto;
+    height: 10vh;
+
+    align-items: flex-start;
+   
+    
+     flex-wrap: wrap;
+     background-color: #f54263;
+     
+     
+
+  }
+  .flex-container_h{
+    display: flex;
+    margin-top: 2vh;
+    margin-left:15vw;
+    align-items: flex-start;
+
+    align-content: center;
+     flex-wrap: wrap;
+
+  }
+  #boxcard
+  {
+    display: flex;
+    width: 20vw;
+    height: 55vh;
+    margin:4vw;
+    margin-top:0vh;
+      background-color: #003366;
+      box-shadow: 5px 10px #888888;
+  }
+  #boxcard:hover
+{
+  background-color: #cc0099;
+
+}
+  .oval
+  {
+    border-radius: 50%;
+  }
+  #id_username
+  {
+    background-color: white;
+    color: blue;
+  }
+
+
+
+  #fr
+{
+
+  padding-left:1vw;
+  color: white ;
+  margin-top: 0.6vh;
+ justify-content: center;
+  
+}
+#sr
+{
+  margin-left: 2vw ; 
+  margin-top: 0.5vh
+}
+#frt
+{
+  font-size: 1.5em;
+
+}
+
+
+  #bt1
+  {
+    height: 4vh;
+  width: 18vw;
+  font-size: 1em;
+  color: green;
+  margin-top: 0.5vh;
+  }
+
+
+@media only screen and (max-width: 800px)
+{
+
+
+.flex-container_h1{
+    
+    display: flex;
+    margin-top: 0vh;
+    align-items: flex-start;
+    align-content: center;
+    
+     flex-wrap: wrap;
+     background-color: pink;
+     
+     
+
+  }
+
+
+     #boxcard
+  {
+    display: flex;
+    width: 80vw;
+    height: 60vh;
+    margin:1vw;
+    background-color: #E4FF33;
+    background-color: #003366;
+    box-shadow: 2px 4px #888888;
+
+  }
+   #boxcard:hover
+{
+  background-color: #cc0099;
+
+}
+#s1
+  {
+
+
+    margin-left: 5vw;
+    margin-right:   5vw;
+  }
+#s2
+{
+    height: 60vw;
+    width :70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #s3
+  {
+    margin-left: 0vw;
+
+    width: 90vw;
+  }
+}
+#fr
+{
+
+  margin-left:10vw;
+  color: white ;
+  margin-top: 1vh;
+}
+#sr
+{
+  margin-left: 30vw ; 
+  margin-top: 1.5vh
+}
+#id_username
+{
+   margin-left: 4vw;
+  height: 4vh;
+  width: 15vw;
+
+}
+ #bt1
+  {
+    height: 4vh;
+  width: 10vw;
+  font-size: 1em;
+  color: black;
+  margin-top: 0.7vh;
+  }
+
+@media only screen and (max-width: 1000px)
+{
+
+
+#fr
+{
+
+  padding-left:1vw;
+  color: white ;
+  margin-top: 0.6vh;
+ justify-content: center;
+  
+}
+#sr
+{
+  margin-left: 2vw ; 
+  margin-top: 0.5vh
+}
+#frt
+{
+  font-size: 1.5em;
+
+}
+
+#id_username
+{
+  margin-left: 15vw;
+  height: 4vh;
+  width: 20vw;
+  margin-top: 0.7vh;
+  }
+  #bt1
+  {
+    height: 4vh;
+  width: 18vw;
+  font-size: 1em;
+  color: green;
+  margin-top: 0.5vh;
+  }
+
+
+  }
+
+
+  @media only screen and (max-width: 700px)
+{
+
+#fr
+{
+
+  padding-left:1vw;
+  color: white ;
+  margin-top: 0.5vh;
+ justify-content: center;
+  
+}
+#sr
+{
+  margin-left: 7vw ; 
+  margin-top: 0.4vh
+}
+#frt
+{
+  font-size: 1.5em;
+
+}
+
+#id_username
+{
+  margin-left: 1vw;
+  height: 4vh;
+  width: 20vw;
+  }
+  #bt1
+  {
+    height: 4vh;
+  width: 20vw;
+  font-size: 1em;
+  color: violet;
+  }
+}
+
+@media only screen and (max-width: 580px)
+{
+
+#fr
+{
+
+  padding-left:10vw;
+  color: white ;
+  margin-top: 0.5vh;
+ justify-content: center;
+  
+}
+#sr
+{
+  margin-left: 5vw ; 
+  margin-top: 0.2vh
+}
+#frt
+{
+  font-size: 1.5em;
+
+}
+
+#id_username
+{
+  margin-left: 5vw;
+  height: 4vh;
+  width: 40vw;
+  }
+  #bt1
+  {
+    height: 4vh;
+  width: 35vw;
+  font-size: 0.7em;
+  color: red;
+  }
+}
+/* class="container p-3 my-3 bg-dark text-white" */
+
+</style>
+<body class="flex_body">
+<div  class="flex-container_h1">
+  
+<div id="fr"  ><h2 id="frt">Fricle-friend circle</h2></div>
+<div id="sr">
+  <form action="{% url 'seeprofile' %}"method="POST">
+                    {% csrf_token %}
+                    {{form.username}}
+                    <button type="submit" id="bt1">Search User</button>
+  </form>
+</div>
+</div>
+
+
+<div  class="flex-container_h">
+
+            <a href="{% url 'feeds' %}"><div id="boxcard" class="card">
+            <img class="oval" class="oval" src="https://cdn.pixabay.com/photo/2015/01/20/14/27/office-605503_1280.jpg" alt="Avatar" style="height: 60%">
+            <div class="container">
+             <h4 style="color:white"><b>FEEDS</b></h4>
+             <p style="color:white"style="font-size: 1.2em">See your feeds</p>
+            </div>
+          </div></a>
+          <a href="{% url 'addpost' %}"><div id="boxcard" class="card">
+            <img class="oval" src="https://images.unsplash.com/photo-1472393365320-db77a5abbecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Avatar" style="height: 60%">
+            <div class="container">
+             <h4 style="color:white"><b>SHARE YOUR POSTS</b></h4>
+             <p style="color:white" style="font-size: 1.2em">Add your  posts. Share your stories with world.</p>
+            </div>
+          </div></a>
+
+
+
+            <a href="{% url 'sendmessage' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://cdn.pixabay.com/photo/2018/03/22/02/37/email-3249062__340.png" style="height:60%">
+      <div class="container">
+        <h4 style="color:white"><b>YOUR MESSENGER</b></h4>
+        <p style="color:white" style="font-size: 1.2em"> Ping your friends using their username. Do one to one conversations</p>
+      </div>
+
+    </div></a>
+    <a href="{% url 'viewmessage' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://cdn.pixabay.com/photo/2015/11/15/19/49/ipad-1044716__340.jpg" style="height:60%">
+      <div class="container">
+        <h4 style="color:white"><b>YOUR CHAT</b></h4>
+        <p style="color:white" style="font-size: 1.2em">Goto your conversations</p>
+      </div>
+    </div></a>
+
+    <a href="{% url "currenttodos" %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://previews.123rf.com/images/bryljaev/bryljaev1203/bryljaev120300030/12841446-bulletin-board-with-todo-list-and-check-list.jpg" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 style="color:white"><b>THINGS TO BE DONE</b></h4>
+         <p style="color:white" style="font-size: 1.2em">Manage your Todo list </p>
+        </div>
+      </div></a>
+
+      <a href="{% url "createtodo" %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 style="color:white"><b>DON'T FORGET YOUR PRIORITY</b></h4>
+         <p style="color:white" style="font-size: 1.2em">Mark things to be done to your todo list</p>
+        </div>
+      </div></a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+{% endblock %}

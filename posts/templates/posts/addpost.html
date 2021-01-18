@@ -1,0 +1,354 @@
+
+{% extends 'posts/bootstrap.html' %}
+
+{% block content %}
+<!--
+{% if message %}
+<script type="text/javascript">
+	alert('{{message}}')
+</script>
+	 {% endif %}
+
+-->
+
+<title>fricle| share your blog, images, posts</title>
+
+<style type="text/css">
+  .d
+  {
+    display: flex;
+      align-self: top;
+
+         padding-left: 10vw;
+  }
+
+body {
+  /*background-image: url('https://files.123freevectors.com/wp-content/original/131198-cool-red-polygon-triangle-pattern-background.jpg');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;
+  margin-top: 0vw;*/
+   background-color: #f8f8f8;
+  margin-top: 0vw;
+
+}
+
+  #t
+  {
+       background-color : #00acee;
+      color :white;
+       border-radius:40px;
+
+       margin-left: 0vw;
+      margin-top: -2vh;
+      width: 60vw;
+  }
+
+    #tit
+    {
+      margin-top: 4vh;
+      margin-left: 0vw;
+      color: white;
+      font-size: 1.5em;
+    }
+       #id_title{
+        margin-top: 0vh;
+        margin-left: 15vw;
+        width :40vw;
+        height :6vh;
+        color:blue;
+        font-size:1.5em;
+        background-color :white;
+        border-radius:40px;
+
+    }
+       #id_link{
+      position: absolute;
+        margin-top: 2vh;
+        margin-left: 15vw;
+        width :40vw;
+        height :7vh;
+        color:blue;
+        font-size:1.5em;
+        background-color :white;
+        border-radius:40px;
+
+    }
+  #url1
+    {
+
+
+      margin-top: 4vh;
+      margin-left: 0vw;
+      color: white;
+      font-size: 1.5em;
+
+    }
+
+    #des
+    {
+      margin-top: 20vh;
+      margin-left: 0vw;
+      color: white;
+      font-size: 1.5em;
+
+    }
+ #vid
+  {
+    color:white;
+    margin-top: -9vh;
+  }
+   #id_videofile
+  {
+    margin-bottom: 40vh;
+    margin-left: 10vw;
+    color: white;
+
+  }
+
+    #id_description{
+        margin-top:2vh;
+        margin-left:15vw;
+        width :40vw;
+        height :12vh;
+        font-size:1em;
+        background-color :white;
+        color :blue;
+        border-radius:40px;
+
+    }
+ /*     #bt1
+  {
+    margin-bottom: 2vh;
+    margin-left :-5vw;
+    font-size: 1.5em;
+    background-color:#76323F;
+    color:white;
+  }
+  #img
+  {
+    color:white;
+    margin-top: 10vh;
+  }
+  #id_image
+  {
+    margin-bottom: 40vh;
+    margin-left: 10vw;
+    color: white;
+
+  }*/
+     #bt1
+  {
+    margin-bottom: -15vh;
+    margin-left :-5vw;
+    font-size: 1.5em;
+    background-color:#00acee;
+    color:white;
+    border-radius:15px;
+  }
+  #img
+  {
+    color:#565656;
+    margin-top: 15vh;
+  }
+  #id_image
+  {
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+    color: blue;
+
+  }
+
+
+
+@media only screen and (max-width: 800px)
+{
+
+
+    #t
+    {
+      margin-left: 3vw;
+      margin-top: -1vh;
+        font-size:0.7em;
+
+      color :white;
+      border-radius:25px;
+      width:70vw;
+      margin-left:5vw;
+    }
+
+
+
+
+
+     #tit
+    {
+      margin-top: 2vh;
+      margin-left: 10vw;
+      color: white;
+      font-size: 1.5em;
+    }
+       #id_title{
+        margin-top: 4vh;
+        margin-left: 0vw;
+        width :70vw;
+        height :10vw;
+        color:blue;
+        font-size:1.2em;
+        background-color :white;
+
+    }
+      #id_link{
+        margin-top: 0vh;
+        margin-left: 0vw;
+        width :70vw;
+        height :14vw;
+        color:blue;
+        font-size:1.2em;
+        background-color :white;
+        border-radius:25px;
+
+    }
+
+
+    #des
+    {
+      margin-top: 2vh;
+      margin-left: 10vw;
+      color: white;
+      font-size: 1.5em;
+
+    }
+
+    #id_description{
+        margin-top:2vh;
+        margin-left:0vw;
+        width :70vw;
+        height :25vw;
+        font-size:1em;
+        background-color :white;
+        color :blue;
+        border-radius:25px;
+
+    }
+ /*     #bt1
+  {
+    margin-top: -50vh;
+    margin-left :20vw;
+    font-size: 1em;
+    background-color:green;
+    color:white;
+  }
+  #img
+  {
+    color:white;
+    margin-left: 15vw;
+    margin-top: 2vh
+  }
+  #id_image
+  {
+    margin-top: 2vw;
+    margin-left: 15vw;
+    color: white
+
+  }*/
+
+
+      #bt1
+  {
+    position:absolute;
+    margin-top: 12vh;
+    margin-left :-70vw;
+    font-size: 1em;
+    background-color:#00acee;
+    color:white;
+  }
+  #img
+  {
+    color:#565656;
+
+    margin-top: 8vh
+  }
+  #vid
+  {
+    color:white;
+    margin-top: -9vh;
+  }
+
+    #id_videofile
+  {
+    margin-bottom: 40vh;
+    margin-left: 10vw;
+    color: white;
+
+  }
+
+  #id_image
+  {
+    margin-top: 1vw;
+    margin-left: 10vw;
+
+
+  }
+}
+</style>
+
+<div class="container text-center">
+<h3 id="t" class="alert alert-success">SOMETHING TO SHARE</h3>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="d">
+
+
+
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+
+
+              <!--   <h3 id="tit" >Title</h3> -->
+                  {{form.title}}
+                 <br>
+           <!--   <h3 id="des" >Description</h3> -->
+                 {{form.description}}
+         <!--     <h3 id="url1" >URL</h3> -->
+                     <br><br>
+                   {{form.link}}
+
+
+                <h3 id="img" >Image</h3>
+                 {{form.image}}
+
+              <!--   <h3 id="vid" >Video</h3>
+                 {{form.videofile}} -->
+
+
+                  <button id="bt1" class="btn btn-success" type="submit"><i  class="fa fa-paper-plane"  aria-hidden="true"></i></button>
+      </form>
+
+
+
+
+
+
+</div>
+
+
+<!--<p style="color:white;font-size:1.5em;position:absolute; margin-top:-30vh;margin-left:20vw;">your post will be verified before it will be made visible to other people</p>
+-->
+
+
+{% endblock %}

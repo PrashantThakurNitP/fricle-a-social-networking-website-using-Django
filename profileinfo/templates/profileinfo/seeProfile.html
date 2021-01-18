@@ -1,0 +1,277 @@
+{% extends 'posts/bootstrap.html' %}
+
+{% block content %}
+
+{% if error %}
+<script type="text/javascript">
+	alert('{{error}}')
+</script>
+	 {% endif %}
+
+
+
+
+<style type="text/css">
+
+body {
+ /* background-image: url('https://cdn.dribbble.com/users/722246/screenshots/11096994/media/abcf2fe91c135bbaec19a3816dd0a992.gif');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;*/
+  background-color: #F8F8FF;
+  margin-top: 0vw;
+}
+
+
+
+  .flex-container_up{
+    display: flex;
+    margin: auto;
+
+    align-items: space-between;
+    background-color: white;
+    align-content: center;
+
+     flex-wrap: wrap;
+     flex-direction: column;
+
+  }
+
+  .flex-container_profile{
+    display: flex;
+    margin: auto;
+
+    align-items: space-between;
+
+    align-content: flex-start;
+     flex-wrap: wrap;
+
+
+
+  }
+  #profile_box1
+  {
+
+    margin: auto;
+
+
+    padding: 2vw;
+    margin-top:-10vh;
+    margin-left:20vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+  #profile_box1
+  {display: flex;
+    width: auto;
+    padding-left: auto;
+    background-color: white;
+    flex-wrap: wrap;
+    flex-flow:column;
+  }
+
+   #id_title
+  {
+    height: 15vh;
+    width: 50vw;
+  }
+ #id_form
+{
+  color: white;
+}
+
+.oval
+  {
+    align-self: center;
+    border-radius: 50%;
+    height: 60vh;
+    width: 30vw;
+  }
+
+@media only screen and (max-width: 900px)
+{
+
+ .oval
+  {
+    align-self: center;
+    border-radius: 50%;
+    height: 60vw;
+    width: 60vw;
+  }
+
+  #id_title
+  {
+    height: 10vh;
+    width: 80vw;
+  }
+
+  .flex-container_profile{
+    display: flex;
+    margin-top: -2vh;
+    padding: 0vw;
+
+    align-items: flex-start;
+
+    align-content: center;
+     flex-wrap: wrap;
+     flex-flow: column;
+
+  }
+
+
+
+  #profile_box1
+  {
+    display: flex;
+    padding: 0vw;
+
+    padding-top: 1vh;
+    padding-left: 2vw;
+    margin-left: 0vw;
+    margin-top: -15vw;
+
+
+    width: 95vw;
+    background-color: white;
+    flex-direction: column;
+    word-wrap: break-word;
+  }
+
+
+}
+
+
+
+
+
+</style>
+
+
+
+<!--
+ <li class="nav-item"> <form action="{% url 'viewprofile' user.id %}" >
+
+              {% csrf_token %}
+              <button   class="btn btn-danger" type="submit">viewprofile</button>
+
+            </form></li>
+ <li class="nav-item"> <form action="{% url 'seeprofile' %}" >
+
+              {% csrf_token %}
+              <button   class="btn btn-danger" type="submit">seeprofile</button>
+
+            </form></li>
+
+ <li class="nav-item"> <form action="{% url 'updateprofile' %}" >
+
+              {% csrf_token %}
+              <button   class="btn btn-danger" type="submit">updateprofile</button>
+
+            </form></li>
+          -->
+
+
+
+
+{% if messages %}
+<div class="alert alert-success alert-dismissible">
+  {% for message in messages %}
+    <p>{{ message }}</p>
+  {% endfor %}
+</div>
+{% endif %}
+
+
+
+{% if error %}
+ERROR : {{error}}
+{% endif %}
+<br>
+
+
+<div class="flex-container_profile">
+<br>
+{% for p in profile %}
+
+
+<div id="profile_box1">
+ {% if p.image %}
+
+
+            <img class="oval" src="{{ p.image.url }}" alt="Avatar" >
+
+
+
+
+
+                        {% endif %}
+
+<br>
+
+          <p style="color: blue;font-size: 1.3em;">    Fullname : &nbsp {{p.Fullname}}    </p>
+
+
+<p>{{p.about}}</p>
+
+<p>email  : &nbsp  {{p.email}}</p>
+
+
+
+<p>Date of birth : &nbsp {{p.dob}}</p>
+
+<p>Address : &nbsp {{p.address}}</p>
+<br>
+
+
+{% ifnotequal user1 user %}
+<br>
+<p style="color: red"> Message {{p.Fullname}}</p>
+<br>
+ <form action="{% url 'sendmemessage' user1.id %}" method="POST">
+                    {% csrf_token %}
+                    {{form2.title}}
+                    <br>
+                    <button type="submit" class="btn btn-info" id="bt1">SEND</button>
+  </form>
+{% endifnotequal %}
+{% ifequal user1 user %}
+ <li class="nav-item"> <form action="{% url 'updateprofile' %}" >
+
+              {% csrf_token %}
+              <button   class="btn btn-danger" style="background-color: #565656" type="submit">updateprofile</button>
+
+            </form></li>
+
+{% endifequal %}
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<!--<div id="profile_box2">
+</div
+-->
+{% endfor %}
+<!--{% ifnotequal user1 user %}
+ <div id="profile_box2" >
+
+ <form action="{% url 'sendmemessage' user1.id %}" method="POST">
+                    {% csrf_token %}
+                    {{form2.title}}
+                    <button type="submit" id="bt1">message me</button>
+  </form>
+  </div>
+{% endifnotequal %} -->
+
+</div>
+{% endblock %}

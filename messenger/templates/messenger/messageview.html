@@ -1,0 +1,162 @@
+
+
+
+
+<!--  start --->
+{% extends 'posts/bootstrap.html' %}
+
+{% load static %}
+{% block content %}
+<!--
+{% if messageany %}
+<script type="text/javascript">
+  alert('{{messageany}}')
+</script>
+   {% endif %}
+-->
+<style type="text/css">
+      #a1{
+font-family: 'Permanent Marker', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+}
+#b1
+{
+      font-family: 'Permanent Marker', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Great Vibes', cursive;
+}
+
+body {
+
+   /*background-color: #D7CEC7;*/
+   background-color :white;
+  margin-top: 0vw;
+
+}
+#i1
+{
+	margin-left: 0vw;
+	width: 70vw;
+}
+#i2
+{
+	margin-left: 10vw;
+	width: 60vw;
+	color: blue;
+	 word-wrap: break-word;
+}
+ #i1
+  {
+       background-color :#00acee;
+      color :white;
+      box-shadow: 3px 6px #565656;
+      text-align :center;
+  }
+  #send1
+  {
+
+
+      border-radius:25px;
+      color: #0066cc;
+      background-color: #ffe6e6;
+       word-wrap: break-word;
+
+
+  }
+  #send1.p
+  {
+  	color: #004280;
+  }
+   #rec1
+  {
+
+
+      border-radius:25px;
+      background-color :#e6f0ff;
+      color:#991f00;
+       word-wrap: break-word;
+  }
+  #rec1.p
+  {
+
+  	 color:#990000;
+  }
+@media only screen and (max-width: 900px) {
+  #i1{
+
+   margin-left: 4vw;
+   width: 85vw;
+   font-size: 0.7em;
+   text-align: center;
+   border-radius:30px;
+  }
+  #i2
+{
+	margin-left: -5vw;
+	width: 100vw;
+	font-size: 0.5em;
+}
+}
+
+
+</style>
+<body>
+<h3 id="i1" class="alert alert-success">RECENT MESSAGES</h3>
+<ul id="i2">
+
+
+{% for message  in mylist  %}
+
+
+			 {% if message.sender == user %}
+
+<a href="{% url 'sendmessageto' message.receiver %}">
+
+					<div  class="alert alert-warning" id = "send1">
+
+					{% if message.title %}
+				<p style="color: red">		To : {{message.receiver}}  <br>  {{message.title}}</p>
+					<br>
+					{% endif %}
+
+
+
+				<p style="color: red"> {{message.date1}} IST </p>
+				<p style="color: red">click to reply</p>
+						</div>
+
+
+
+
+</a>
+
+
+			 {% else %}
+			 <a href="{% url 'sendmessageto' message.sender %}">
+					<div  class="alert alert-success" id = "rec1">
+
+					{% if message.title %}
+				<p style="color: blue">	{{message.sender}} : {{message.title}}</p>
+
+					{% endif %}
+
+
+				<p style="color: blue">	 {{message.date1}} IST  </p>
+            <p style="color: blue">click to reply</p>
+					</div>
+
+					</a>
+				{% endif %}
+
+
+{% endfor %}
+
+
+
+
+</ul>
+<body>
+
+{% endblock %}

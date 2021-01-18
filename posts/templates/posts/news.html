@@ -1,0 +1,385 @@
+
+{% extends 'posts/base_not_logged.html' %}
+
+{% block content %}
+<head>
+ <meta name="google-site-verification" content="3ei0cSPDpuoPylmV4qMzyhvrNb79oxeL8jWHUSqAVe4" />
+</head>
+<meta name="description" content="fricle| news |from top website india today cnn bbc sports corona bollywood hollywood science and technology |Prashant thakur " />
+<meta name="google-site-verification" content="3ei0cSPDpuoPylmV4qMzyhvrNb79oxeL8jWHUSqAVe4" />
+<meta name="keywords" content=" fricle |news |from top news channel like| bbc|cnn| national geographic| india today| and popular topic like news from technology|computer|science| corona|sports|cricket| bollywood |hollywood" />
+<style type="text/css">
+
+
+
+body {
+ /* background-image: url('https://cdn.dribbble.com/users/722246/screenshots/11096994/media/abcf2fe91c135bbaec19a3816dd0a992.gif');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;*/
+  background-color: #C09F80;
+    background-color:#c0deed;
+     background-color:#f8f8f8;
+  margin-top: 0vw;
+}
+
+
+  #b1
+{
+      font-family: 'Permanent Marker', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Great Vibes', cursive;
+}
+/*#s2
+{
+    height: 60vw;
+    width :70vw;
+    margin-left: 0vw;
+    margin-right: auto;
+  }
+  #s1
+  {
+
+
+    margin-left: 5vw;
+    margin-right:   auto;
+    width :75vw;
+  }
+  #s3
+  {
+    margin-left: 0vw;
+
+    width: 160vw;
+
+  }*/
+
+  .flex-container_h{
+    display: flex;
+    margin-top: 1vh;
+    padding-right: 3vw;
+    align-items: flex-start;
+
+    align-content: center;
+     flex-wrap: wrap;
+
+  }
+  #boxcard
+  {
+    display: flex;
+    width: 20vw;
+    height: 55vh;
+    margin:2vw;
+    margin-top:0vh;
+    /*  background-color:#38A1F3;*/
+    background-color:white;
+
+      color : #76323f;
+      color:black;
+     /* box-shadow: 5px 10px #888888;*/
+      word-wrap: break-word;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+  #boxcard:hover
+{
+ /* background-color: blue;*/
+
+   box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+
+}
+  .oval
+  {
+    border-radius: 50%;
+  }
+
+
+  @media only screen and (max-width: 990px)
+{
+
+
+.flex-container_h1{
+
+
+    width: 90vw;
+
+
+  }
+
+}
+
+
+
+@media only screen and (max-width: 800px)
+{
+  .flex-container_h{
+    display: flex;
+    margin-top: -5vh;
+    padding-right: 0vw;
+    align-items: flex-start;
+padding-left:1vw;
+    align-content: center;
+     flex-wrap: wrap;
+
+  }
+
+
+     #boxcard
+  {
+    display: flex;
+    width: 43vw;
+    height: 26vh;
+
+
+
+ /*   box-shadow: 2px 4px #888888;*/
+
+  }
+   #boxcard:hover
+  {
+     /* background-color: blue;
+      color:white;*/
+       border: 1px solid #888888;
+    box-shadow:  -1px 1px #888888,
+         -2px 2px #888888,
+
+   }
+
+   #p1
+   {
+       font-size:0.5em;
+   }
+
+#h41
+{
+    font-size:0.7em;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+<p style="font-size:0em">Fricle - Your friend circle , a place for people to meet and mingle. Share your posts. Send personal messages, Update your profile and maintain your todo list privately.
+This website is handcrafted in India . Create your account , its very easy. Try it now </p>
+
+<!--<div  class="flex-container_h1">
+
+<!--<div id="sr">
+  <form action="{% url 'seeprofile' %}"method="POST">
+                    {% csrf_token %}
+                    {{form.username}}
+                    <button type="submit" id="bt1">Search User</button>
+  </form>
+
+</div>
+-->
+
+<!--<div id="fr"  ><h2 id="frt">Fricle-friend circle</h2></div>
+-->
+
+
+
+
+
+<div  class="flex-container_h">
+
+
+          <a href="{% url 'newsfeedsindia' %}"><div id="boxcard" class="card">
+            <img class="oval" src="https://i.pinimg.com/originals/c9/86/6d/c9866d07e2c55b47845b71696f299bfd.jpg" alt="Avatar" style="height: 60%">
+            <div class="container">
+             <h4 id="h41" ><b> NEWS FROM INDIA</b></h4>
+             <p id="p1" style="color: #565656", style="font-size: 1.2em">ALL INDIAN NEWS.</p>
+            </div>
+          </div></a>
+
+
+
+            <a href="{% url 'newsfeedstoi' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://i.pinimg.com/236x/02/23/7e/02237e12c96daee40e165967d5085e48.jpg" style="height:60%">
+      <div class="container">
+        <h4 id="h41"  ><b>TIMES OF INDIA</b></h4>
+        <p id="p1" style="color: #565656", style="font-size: 0.7em;">Times of India news channel</p>
+        </div>
+      </div></a>
+
+      <a href="{% url 'thehindu' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://exchange4media.gumlet.com/news-photo/93208-hindunew.jpg?format=webp&w=1100" style="height:60%">
+      <div class="container">
+        <h4 id="h41"  ><b>THE HINDU</b></h4>
+        <p id="p1" style="color: #565656", style="font-size: 0.7em;">The hindu news channel</p>
+      </div>
+
+    </div></a>
+
+     <a href="{% url 'newsfeedsgoogle' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://pbs.twimg.com/profile_images/378800000841078676/fc04f975f7992205cb3c3c4d518024e9.png" style="height:60%">
+      <div class="container">
+        <h4 id="h41"  ><b>GOOGLE NEWS</b></h4>
+        <p id="p1" style="color: #565656", style="font-size: 0.7em;">Google news for india</p>
+      </div>
+
+    </div></a>
+    <a href="{% url 'newsfeedsworld' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/BBC_News.svg/1200px-BBC_News.svg.png" style="height:60%">
+      <div class="container">
+        <h4 id="h41" ><b>BBC NEWS</b></h4>
+        <p id="p1" style="color: #565656", style="font-size: 0.7em;">World news from bbc</p>
+      </div>
+      </div></a>
+ <a href="{% url 'newsfeedsworldcnn' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://pbs.twimg.com/profile_images/925092227667304448/fAY1HUu3_400x400.jpg" style="height:60%">
+      <div class="container">
+        <h4 id="h41" ><b>CNN NEWS</b></h4>
+        <p id="p1" style="color: #565656", style="font-size: 0.7em;">World news from CNN</p>
+      </div>
+
+
+    </div></a>
+     <a href="{% url 'newsfeedsenterbolly' %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://s.studiobinder.com/wp-content/uploads/2020/04/What-is-Bollywood-Featured.jpg" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4  id="h41" ><b>BOLLYWOOD  NEWS</b></h4>
+         <p  id="p1" style="color: #565656", style="font-size: 1.2em">News from film indian industry</p>
+        </div>
+      </div></a>
+
+     <a href="{% url 'newsfeedsenter' %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://opt.toiimg.com/recuperator/img/toi/m-72911855/72911855.jpg&width=500&resizemode=4" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4  id="h41" ><b>HOLLYWOOD  NEWS</b></h4>
+         <p  id="p1" style="color: #565656", style="font-size: 1.2em">News from film american industry</p>
+        </div>
+      </div></a>
+
+<a href="{% url 'corona' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://img.etimg.com/thumb/msid-74665367,width-1200,height-900,imgsize-980841,overlay-etpanache/photo.jpg" style="height:60%">
+      <div class="container">
+        <h4 id="h41" ><b>corona virus News</b></h4>
+        <p id="p1" style="color: #565656", style="font-size: 0.7em;">News on corona virus.</p>
+      </div>
+
+    </div></a>
+
+<a href="{% url 'computer' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://4.imimg.com/data4/CO/YS/MY-29352968/samsung-desktop-computer-500x500.jpg" style="height:60%">
+      <div class="container">
+        <h4 id="h41" ><b>Computer science News</b></h4>
+        <p id="p1" style="color: #565656", style="font-size: 0.7em;"> computer science and entrepreneurship.</p>
+      </div>
+
+    </div></a>
+
+
+    <a href="{% url 'hacker-news' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://images-na.ssl-images-amazon.com/images/I/419wCg-jMfL.png" style="height:60%">
+      <div class="container">
+        <h4 id="h41" ><b>Hacker News</b></h4>
+        <p id="p1" style="color: #565656", style="font-size: 0.7em;">social news website focusing on computer science and entrepreneurship.</p>
+      </div>
+
+    </div></a>
+
+<a href="{% url 'nationalgeographic' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://blog.clickdimensions.com/wp-content/uploads/2019/07/BlogFeatureImage-6-Social-Media-Lessons-from-National-Geographic%E2%80%99s-Huge-Instagram-Following.png" style="height:60%">
+      <div class="container">
+        <h4 id="h41" ><b>NATIONAL GEOGRAPHY</b></h4>
+        <p id="p1"  style="color: #565656", style="font-size: 1.2em">Reporting our world daily: original nature and science news from National Geographic</p>
+      </div>
+    </div></a>
+
+
+    <a href="{% url 'newsfeedssports' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://sportsshow.net/wp-content/uploads/2019/04/Most-Popular-Sports-in-America.jpg" style="height:60%">
+      <div class="container">
+        <h4 id="h41" ><b>SPORTS NEWS</b></h4>
+        <p id="p1"  style="color: #565656", style="font-size: 1.2em">From all over the world</p>
+      </div>
+    </div></a>
+
+    <a href="{% url 'newsfeedsci' %}"><div id="boxcard" class="card">
+      <img class="oval" src="https://cdn3.vectorstock.com/i/1000x1000/56/47/cricket-stadium-wallpaper-vector-20455647.jpg" style="height:60%">
+      <div class="container">
+        <h4 id="h41"  ><b>CRICKET NEWS</b></h4>
+        <p id="p1"  style="color: #565656", style="font-size: 1.2em">from cricinfo</p>
+      </div>
+    </div></a>
+
+
+    <a href="{% url 'newsfeedsscience' %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://image.shutterstock.com/image-illustration/atomic-structure-scientific-breakthrough-modern-260nw-1140894395.jpg" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 id="h41"  ><b>SCIENCE NEWS</b></h4>
+         <p id="p1"  style="color: #565656", style="font-size: 1.2em">Recent development in science </p>
+        </div>
+      </div></a>
+
+      <a href="{% url 'newsfeedstechno' %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://businessday.ng/wp-content/uploads/2019/11/Technology-industry.jpg" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 id="h41"  ><b>TECHNOLOGY NEWS</b></h4>
+         <p id="p1"  style="color: #565656", style="font-size: 1.2em">Get technically updated</p>
+        </div>
+      </div></a>
+        <a href="{% url 'religion' %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://i.ytimg.com/vi/uy3mLmxgCNE/maxresdefault.jpg" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 id="h41"  ><b>RELIGION</b></h4>
+         <p id="p1"  style="color: #565656", style="font-size: 1.2em">for spirituals</p>
+        </div>
+      </div></a>
+
+          <a href="{% url 'books' %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://image.shutterstock.com/image-photo/education-learning-concept-opening-book-260nw-794015686.jpg" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 id="h41"  ><b>BOOKS NEWS</b></h4>
+         <p id="p1"  style="color: #565656", style="font-size: 1.2em">for nerds</p>
+        </div>
+      </div></a>
+
+          <a href="{% url 'foods' %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://static.toiimg.com/photo/68283907.cms" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 id="h41"  ><b>FOODS NEWS</b></h4>
+         <p id="p1"  style="color: #565656", style="font-size: 1.2em">For foody</p>
+        </div>
+      </div></a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+{% endblock %}
+

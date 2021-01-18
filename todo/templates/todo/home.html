@@ -1,0 +1,245 @@
+
+{% extends 'posts/bootstrap.html' %}
+
+{% block content %}
+<head>
+ <meta name="google-site-verification" content="3ei0cSPDpuoPylmV4qMzyhvrNb79oxeL8jWHUSqAVe4" />
+</head>
+<meta name="google-site-verification" content="3ei0cSPDpuoPylmV4qMzyhvrNb79oxeL8jWHUSqAVe4" />
+<style type="text/css">
+
+
+
+body {
+ /* background-image: url('https://cdn.dribbble.com/users/722246/screenshots/11096994/media/abcf2fe91c135bbaec19a3816dd0a992.gif');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;*/
+  background-color: #C09F80;
+    background-color:#c0deed;
+     background-color:#f8f8f8;
+  margin-top: 0vw;
+}
+
+
+  #b1
+{
+      font-family: 'Permanent Marker', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Great Vibes', cursive;
+}
+/*#s2
+{
+    height: 60vw;
+    width :70vw;
+    margin-left: 0vw;
+    margin-right: auto;
+  }
+  #s1
+  {
+
+
+    margin-left: 5vw;
+    margin-right:   auto;
+    width :75vw;
+  }
+  #s3
+  {
+    margin-left: 0vw;
+
+    width: 160vw;
+
+  }*/
+
+  .flex-container_h{
+    display: flex;
+    margin-top: 1vh;
+    padding-right: 3vw;
+    align-items: flex-start;
+
+    align-content: center;
+     flex-wrap: wrap;
+
+  }
+  #boxcard
+  {
+    display: flex;
+    width: 20vw;
+    height: 55vh;
+    margin:2vw;
+    margin-top:0vh;
+    /*  background-color:#38A1F3;*/
+    background-color:white;
+
+      color : #76323f;
+      color:black;
+     /* box-shadow: 5px 10px #888888;*/
+      word-wrap: break-word;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+  #boxcard:hover
+{
+ /* background-color: blue;*/
+
+   box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+
+}
+  .oval
+  {
+    border-radius: 50%;
+  }
+
+
+  @media only screen and (max-width: 990px)
+{
+
+
+.flex-container_h1{
+
+
+    width: 90vw;
+
+
+  }
+
+}
+
+
+
+@media only screen and (max-width: 800px)
+{
+  .flex-container_h{
+    display: flex;
+    margin-top: -5vh;
+    padding-right: 0vw;
+    align-items: flex-start;
+
+    align-content: center;
+     flex-wrap: wrap;
+     padding-left:1vw;
+
+  }
+
+
+     #boxcard
+  {
+    display: flex;
+    width: 43vw;
+    height: 26vh;
+
+
+
+ /*   box-shadow: 2px 4px #888888;*/
+
+  }
+   #boxcard:hover
+  {
+     /* background-color: blue;
+      color:white;*/
+       border: 1px solid #888888;
+    box-shadow:  -1px 1px #888888,
+         -2px 2px #888888,
+
+   }
+
+   #p1
+   {
+       font-size:0.5em;
+   }
+
+#h41
+{
+    font-size:0.7em;
+}
+
+}
+
+</style>
+
+
+
+
+<body>
+<p style="font-size:0em">Fricle - Your friend circle , a place for people to meet and mingle. Share your posts. Send personal messages, Update your profile and maintain your todo list privately.
+This website is handcrafted in India . Create your account , its very easy. Try it now </p>
+
+<!--<div  class="flex-container_h1">
+
+<!--<div id="sr">
+  <form action="{% url 'seeprofile' %}"method="POST">
+                    {% csrf_token %}
+                    {{form.username}}
+                    <button type="submit" id="bt1">Search User</button>
+  </form>
+
+</div>
+-->
+
+<!--<div id="fr"  ><h2 id="frt">Fricle-friend circle</h2></div>
+-->
+<div  class="flex-container_h">
+<a href="{% url "currenttodos" %}"><div   onmouseover ="changeColor()" onmouseleave="changecolor2()" id="boxcard" class="card">
+       <img class="oval" src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1092571024%2F960x0.jpg%3Ffit%3Dscale" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 id ="h41" style="color:black"><b>THINGS TO BE DONE</b></h4>
+         <p id ="p1" style="color: #565656" style="font-size: 1.2em">Visit you to do list. you can modify your todolist by clicking on them</p>
+        </div>
+      </div></a>
+
+      <a href="{% url "createtodo" %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 id ="h41" style="color:black"><b>ADD TASK TO YOUR TO DO LIST</b></h4>
+         <p id ="p1" style="color:#565656" style="font-size: 1.2em">Mark things to be done to your todo list</p>
+        </div>
+      </div></a>
+          <a href="{% url "completedtodos" %}"><div id="boxcard" class="card">
+       <img class="oval" class="oval" src="https://cdn.pixabay.com/photo/2018/04/21/14/17/raise-3338589_1280.jpg" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 id ="h41"  style="color:black"><b>YOUR ACHIEVEMENT</b></h4>
+         <p id ="p1" style="color:#565656" style="font-size: 1.2em">Task that you have completed </p>
+        </div>
+      </div></a>
+
+
+      <a href="{% url "home" %}"><div id="boxcard" class="card">
+       <img class="oval" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQWELoD6XvzEikMU9aLhDOQlp89wmoosYUmje6rZx-VWUB63M8g&usqp=CAU" alt="Avatar" style="height:60%">
+        <div class="container">
+         <h4 id ="h41" style="color:black"><b>HOME PAGE</b></h4>
+         <p id ="p1" style="color: #565656" style="font-size: 1.2em">Go to Homepage</p>
+        </div>
+      </div></a>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+{% endblock %}
+

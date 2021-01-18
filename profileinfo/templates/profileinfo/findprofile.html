@@ -1,0 +1,195 @@
+
+
+
+{% extends 'posts/bootstrap.html' %}
+
+{% block content %}
+
+
+<style type="text/css">
+
+body {
+ /* background-image: url('https://cdn.dribbble.com/users/722246/screenshots/11096994/media/abcf2fe91c135bbaec19a3816dd0a992.gif');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;*/
+  background-color: #f8f8f8;
+  margin-top: 0vw;
+  color: white;
+  width: 70vw;
+  height: 100%;
+}
+
+
+
+
+  .flex-container_up{
+    display: flex;
+    margin: 5vw;
+    margin-top: -2vh;
+    padding-right: 3vw;
+    align-items: space-between;
+    background-color: #565656;
+
+    align-content: center;
+     flex-wrap: wrap;
+
+  }
+
+#id_form
+{
+  color: white;
+}
+
+  #id_username
+{
+  margin-left: 1vw;
+  height: 4vh;
+  width: 20vw;
+  border-radius:15px;
+  }
+  #bt1
+  {
+    height: 4vh;
+    margin-left:5vw;
+  width: 8vw;
+  font-size: 1em;
+  color:38A1F3;
+  border-radius:15px;
+  }
+ .flex-container_h{
+    display: flex;
+    margin-top: 0vh;
+    padding-right: 3vw;
+    align-items: flex-start;
+
+    align-content: center;
+     flex-wrap: wrap;
+
+  }
+  #boxcard
+  {
+    display: flex;
+    width: 30vw;
+    height: 55vh;
+    margin:auto;
+    margin-top:0vh;
+    /*  background-color:#38A1F3;*/
+    background-color:white;
+
+      color : #76323f;
+      color:black;
+     /* box-shadow: 5px 10px #888888;*/
+      word-wrap: break-word;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+  #boxcard:hover
+{
+ /* background-color: blue;*/
+
+   box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+
+}
+  .oval
+  {
+    border-radius: 50%;
+  }
+
+
+@media only screen and (max-width: 800px)
+
+{
+  #t
+    {
+      margin-left: 3vw;
+      margin-top: -5vh;
+        font-size:0.7em;
+
+      color :white;
+      box-shadow: 2px 4px;
+    }
+    #id_username
+{
+  margin-left: 5vw;
+  height: 10vw;
+  width: 80vw;
+  border-radius:15px;
+  }
+  #bt1
+  {
+
+    height: 8vw;
+  width: 80vw;
+  font-size: 0.7em;
+  border-radius:15px;
+
+
+  }
+      #boxcard
+  {
+    display: flex;
+    width: 97vw;
+    height: 80vh;
+    margin:1vw;
+    margin-top:-5vh;
+    margin-left:1vw;
+
+ /*   box-shadow: 2px 4px #888888;*/
+
+  }
+   #boxcard:hover
+  {
+     /* background-color: blue;
+      color:white;*/
+       border: 1px solid #888888;
+    box-shadow:  -1px 1px #888888,
+         -2px 2px #888888,
+         -3px 3px #888888,
+         -4px 4px #888888,
+         -5px 5px #888888;
+
+   }
+
+   #bt1
+  {
+    height: 8vw;
+    margin-left:5vw;
+  width: 80vw;
+  font-size: 1em;
+  color:38A1F3;
+  border-radius:15px;
+  }
+
+
+
+
+
+}
+</style>
+
+
+{% if messages %}
+<div class="alert alert-success alert-dismissible">
+  {% for message in messages %}
+    <p>{{ message }}</p>
+  {% endfor %}
+</div>
+{% endif %}
+
+ <div id="boxcard" class="card">
+        <img class="oval" src="https://cdn2.iconfinder.com/data/icons/webstore/512/explore_audience-512.png" style="height:60%">
+            <div class="container">
+<form action="{% url 'seeprofile' %}"method="POST">
+                    {% csrf_token %}
+                    {{form.username}}
+                    <button type="submit" id="bt1">Search User</button>
+                 </form>
+<br>
+             <p style="color: #565656",style="font-size: 1.2em">See a particular person profile.Enter anyone username</p>
+            </div>
+          </div>
+
+
+
+
+{% endblock %}

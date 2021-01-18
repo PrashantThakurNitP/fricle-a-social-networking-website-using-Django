@@ -1,0 +1,253 @@
+{% extends 'posts/base_not_logged.html' %}
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Fricle|news</title>
+<meta name="description" content="fricle| news |from top website india today cnn bbc sports corona bollywood hollywood science and technology |Prashant thakur " />
+<meta name="google-site-verification" content="3ei0cSPDpuoPylmV4qMzyhvrNb79oxeL8jWHUSqAVe4" />
+<meta name="keywords" content=" fricle |news |from top news channel like| bbc|cnn| national geographic| india today| and popular topic like news from technology|computer|science| corona|sports|cricket| bollywood |hollywood" />
+
+<style type="text/css">
+      #a1{
+font-family: 'Permanent Marker', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+}
+#b1
+{
+
+}
+
+body {
+  /*background-image: url('https://files.123freevectors.com/wp-content/original/131198-cool-red-polygon-triangle-pattern-background.jpg');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;
+  margin-top: 0vw;*/
+
+   background-color: #f8f8f8;
+  margin-top: 0vw;
+}
+#i2
+{
+       background-color :white;
+    /*box-shadow: 3px 6px #565656;*/
+    border: 0px solid #565656;
+  border-radius: 30px;
+    color: #76323f;
+    width: 60vw;
+    margin-left: 0vw;
+     word-wrap: break-word;
+
+}
+
+
+    #b1
+  {
+      font-size :1em;
+          border-radius:30px;
+  }
+  #fnt1
+  {
+      font-size:1em;
+      color: black;
+  }
+  #lk
+  {
+      font-size :1em;
+  }
+  #at
+  {
+      font-size :1em;
+       color:#565656;
+
+  }
+  #lct
+  {
+      font-size :1em;
+  }
+
+#i3{
+
+   margin-left: 5vw;
+   width: 67vw;
+   margin-top: -2vw;
+  }
+   #lct,#lk
+  {
+
+      color: blue;
+  }
+  #b1
+  {
+    color: black;
+  }
+   #i4{
+
+   margin-left: -1vw;
+   width: 60vw;
+  }
+  #i1{
+
+   margin-left: 1vw;
+   width: 98vw;
+  }
+
+#fdimage
+{
+  display: flex;
+    margin-left:10vw;
+    width:35vw;
+     height:60vh;
+
+
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    body{
+        background-color:white;
+    }
+
+    #i1{
+
+   margin-left: 1px;
+    margin-left: -11vw;
+   width: 100vw;
+   word-wrap: break-word;
+   margin-right:auto;
+
+   background-color:white;
+  }
+
+  #i2{
+
+      padding-top:0px;
+       padding-bottom:1px;
+      padding-left:0px;
+ margin-left: 0px;
+  margin-right:auto;
+
+   width: 99vw;
+    background-color :white;
+      border: 1px solid #565656;
+  border-radius: 20px;
+  word-wrap: break-word;
+
+    /*box-shadow: 2px 4px #565656;*/
+  }
+  #i4{
+
+   margin-left:-6vw;
+   width: 90vw;
+  }
+  #bt2
+  {
+
+          font-size :1em;
+          background-color:#38A1F3;
+  }
+     #b1
+  {
+      font-size :1.2em;
+
+  }
+  #fnt1
+  {
+      font-size:1em;
+
+  }
+  #lk
+  {
+      font-size :0.4em;
+  }
+  #at
+  {
+      font-size :0.7em;
+
+  }
+  #lct
+  {
+      font-size :0.5em;
+  }
+
+
+
+
+
+#feedcmt
+{
+    font-size:0.5em;
+}
+
+
+#fdimage
+{
+    margin-left:0vw;
+    width:98.5vw;
+    height:40vh;
+    border-radius:30px,0px,0px,30px;
+}
+img
+{
+    border-radius:20px;
+}
+
+ }
+
+</style>
+
+<body>
+<!-- <div id = "i3" class="container text-center">
+<h1 id ="i4" class="container p-3 my-3 bg-dark text-white">POSTS</h1>
+</div> -->
+
+  {% for news ,desc,img1,url,time,author in mylist %}
+
+  <ul id="i1">
+<a href="{{url}}"id="lct" target="_blank">
+            <div id ="i2" class="jumbotron text-center">
+
+
+
+
+                  {% if img1 %}
+              <div  id="fdimage">    <img class="oval" src="{{img1 }}" width="100%" height="100%"></div>
+
+                        {% endif %}
+
+
+        <h2 id="fnt1"><b>{{news}} </b></h2><!-- way to highlight if impotant -->
+
+
+
+
+
+
+
+
+
+
+
+
+        {% if desc %}
+
+                    <p id="b1">  {{desc|safe}}</p>
+
+
+        {% endif %}
+           <p id="at"> {{author}}      |  posted on : {{time}} </p>
+
+      </div>
+      </a>
+
+
+
+
+
+</ul>
+
+{% endfor %}
+</body>
+{% endblock %}

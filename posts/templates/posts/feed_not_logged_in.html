@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+{% extends 'posts/base_not_logged.html' %}
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+<style type="text/css">
+      #a1{
+font-family: 'Permanent Marker', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+}
+
+
+body {
+  /*background-image: url('https://files.123freevectors.com/wp-content/original/131198-cool-red-polygon-triangle-pattern-background.jpg');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;
+  margin-top: 0vw;*/
+
+   background-color: #f8f8f8;
+  margin-top: 0vw;
+}
+#i2
+{
+       background-color :white;
+    /*box-shadow: 3px 6px #565656;*/
+    border: 0px solid #565656;
+  border-radius: 30px;
+    color: #76323f;
+    width: 60vw;
+    margin-left: 0vw;
+     word-wrap: break-word;
+
+}
+
+
+    #b1
+  {
+      font-size :1em;
+          border-radius:30px;
+  }
+  #fnt1
+  {
+      font-size:1em;
+      color: black;
+  }
+  #lk
+  {
+      font-size :1em;
+  }
+  #at
+  {
+      font-size :1em;
+       color:#565656;
+
+  }
+  #lct
+  {
+      font-size :1em;
+  }
+
+#i3{
+
+   margin-left: 5vw;
+   width: 67vw;
+   margin-top: -2vw;
+  }
+   #lct,#lk
+  {
+
+      color: blue;
+  }
+  #b1
+  {
+    color: black;
+  }
+   #i4{
+
+   margin-left: -1vw;
+   width: 60vw;
+  }
+  #i1{
+
+   margin-left: 1vw;
+   width: 98vw;
+  }
+   #postimg
+ {
+     height=300;
+     width=300;
+      border-radius: 30px;
+ }
+ #id_comment
+{
+  height:5vh;
+  border-color: white;
+  /* 25px top, 10px right, 4px bottom and 35px left */
+
+  margin-left:0px;
+
+}
+#id_comment
+{
+    border:0px;
+    width:40vw;
+    height:3vw;
+
+}
+#fdimage
+{
+    margin-left:10vw;
+    width:35vw;
+     height:60vh;
+
+
+}
+
+
+@media only screen and (max-width: 900px) {
+    body{
+        background-color:white;
+    }
+
+    #i1{
+
+   margin-left: 1px;
+    margin-left: -11vw;
+   width: 99vw;
+   word-wrap: break-word;
+   margin-right:auto;
+
+   background-color:white;
+  }
+
+  #i2{
+      /**/
+      padding-top:0px;
+       padding-bottom:5px;
+      padding-left:0px;
+ margin-left: 0px;
+  margin-right:auto;
+
+   width: 99vw;
+    background-color :white;
+      border: 0px solid #565656;
+  border-radius: 20px;
+  word-wrap: break-word;
+
+    /*box-shadow: 2px 4px #565656;*/
+  }
+  #i4{
+
+   margin-left:-6vw;
+   width: 90vw;
+  }
+  #bt2
+  {
+
+          font-size :1em;
+          background-color:#38A1F3;
+  }
+     #b1
+  {
+      font-size :0.6em;
+
+  }
+  #fnt1
+  {
+      font-size:0.7em;
+
+  }
+  #lk
+  {
+      font-size :0.4em;
+  }
+  #at
+  {
+      font-size :0.5em;
+
+  }
+  #lct
+  {
+      font-size :0.5em;
+  }
+
+
+
+
+ #imgs
+ {
+     height=50vh;
+     width=70vw;
+ }
+#feedcmt
+{
+    font-size:0.5em;
+}
+
+#id_comment
+{
+    margin-left:2vw;
+    width:70vw;
+    height:10vw;
+    border:0px;
+    border-radius:30px;
+}
+#idc
+{
+    font-size:0.6em;
+}
+#bt2
+{
+    font-size:1.1em;
+        border-radius:30px;
+        background-color:#38A1F3;
+}
+#fdimage
+{
+    margin-left:0vw;
+    width:98.5vw;
+    height:50vh;
+}
+img
+{
+    border-radius:20px;
+}
+
+
+ }
+
+
+</style>
+<body>
+<!-- <div id = "i3" class="container text-center">
+<h1 id ="i4" class="container p-3 my-3 bg-dark text-white">POSTS</h1>
+</div> -->
+
+<ul id="i1">
+<a href="{% url 'loginuser' %}">
+<div id ="i2" class="jumbotron text-center">
+<br>
+ <h2 id="fnt1"><b> login to acess all feature of fricle</b></h2>
+ <p id="at">fill your detail and upload your nice profile image </p>
+</div>
+</a>
+</ul>
+<ul id="i1">
+<a href="{% url 'newscategory' %}">
+<div id ="i2" class="jumbotron text-center">
+<br>
+ <h2 id="fnt1"><b>NEWS </b></h2>
+ <p id="at">You can see news of your choice on fricle. Click here for all news </p>
+</div>
+</a>
+</ul>
+  {% for feed in feeds %}
+
+  <ul id="i1">
+            <div id ="i2" class="jumbotron text-center">
+
+
+
+
+
+              {% if feed.image %}
+                <div id="fdimage"> <img  src="{{ feed.image.url }}" width="100%" height="100%"></div>
+
+                        {% endif %}
+
+                {% if feed.videofile %}
+
+                                  <video width='300' controls>
+                <source src='{{ feed.videofile.url }}' type='video/mp4'>
+                Your browser does not support the video tag.
+                </video>
+                <br>
+
+{% endif %}
+
+ {% if feed.link %}
+
+
+                                    {% if '.png' in feed.link %}
+                                         <div id="fdimage">  <img  src="{{feed.link}}" height="100%" width="100%"></div>
+                                    {% elif '.jpeg' in feed.link %}
+                                      <div id="fdimage">   <img  src="{{feed.link}}" height="100%" width="100%"></div>
+                                    {% elif '.gif' in feed.link %}
+                                      <div id="fdimage">   <img  src="{{feed.link}}" height="100%"  width="100%"></div>
+                                {% elif '.jpg' in feed.link %}
+                                      <div id="fdimage">   <img   src="{{feed.link}}" height="100%"  width="100%">
+                                        </div>
+                                         {% elif 'https://qphs.fs.quoracdn.net/main-qimg' in feed.link %}
+                                      <div id="fdimage">   <img  src="{{feed.link}}"  height="100%" width="100%"></div>
+                                                    {% else %}
+
+                                     <a href="{{feed.link}}"id="lct" target="_blank">Visit link</a>
+
+                                    {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           {% endif %}
+
+
+ <h2 id="fnt1"><b>{{feed.title}} </b></h2><!-- way to highlight if impotant -->
+
+
+
+
+        {% if feed.description %}
+                    {% if 'https://' in feed.description %}
+                    <a href="{{feed.description}}"id="b1" target="_blank">{{feed.description}}</a>
+                    {% elif 'http://' in feed.description %}
+                    <a href="{{feed.description}}"id="b1" target="_blank">{{feed.description}}</a>
+                    {% else %}
+                    <p id="b1">  {{feed.description}}</p>
+                    {% endif %}
+
+        {% endif %}
+        <p id="at">Posted by {{feed.user_new}}      |  {% if feed.created %}  {{feed.created}} {% endif %} |
+
+
+               {% ifequal feed.visibility True %}
+            Public post
+            {% endifequal %}
+            {% ifequal feed.visibility False %}
+            Private post
+            {% endifequal %}
+
+            </p>
+
+
+        <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         likes and comments
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+
+<!--content start -->
+  <div>
+
+
+                             <td ><nobr>
+
+           &nbsp  <p id="lct"  style="display:inline">  {{feed.upvote}} like </p>  &nbsp
+                                       <p id="lk" style="display:inline">   liked by : {{feed.upvoter}}</p>
+
+                    </nobr>
+
+            </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <br>
+                {% if feed.comment %}<h6 id="idc" style="color:red" >Comments </h6>  <p id = "feedcmt">{{feed.comment}}</p> {% endif %}
+            </div>
+
+
+
+
+<!-- end -->
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+{% endfor %}
+</body>
+{% endblock %}

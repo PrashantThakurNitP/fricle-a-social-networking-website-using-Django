@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+{% extends 'posts/bootstrap.html' %}
+
+{% load static %}
+{% block content %}
+<title>fricle| posts| blogs|feeds</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<meta name="keywords" content="fricle your friend circle| social media site| posts| feeds| news |Prashant thakur " />
+<style type="text/css">
+      #a1{
+font-family: 'Permanent Marker', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+}
+
+body {
+  /*background-image: url('https://files.123freevectors.com/wp-content/original/131198-cool-red-polygon-triangle-pattern-background.jpg');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;
+  margin-top: 0vw;*/
+
+   background-color: #f8f8f8;
+  margin-top: 0vw;
+}
+#i2
+{
+       background-color :white;
+    /*box-shadow: 3px 6px #565656;*/
+    border: 0px solid #565656;
+  border-radius: 30px;
+    color: #76323f;
+    width: 60vw;
+    margin-left: 0vw;
+     word-wrap: break-word;
+
+}
+
+
+    #b1
+  {
+      font-size :1em;
+          border-radius:30px;
+  }
+  #fnt1
+  {
+      font-size:1em;
+      color: black;
+  }
+  #lk
+  {
+      font-size :1em;
+  }
+  #at
+  {
+      font-size :1em;
+       color:#565656;
+
+  }
+  #lct
+  {
+      font-size :1em;
+  }
+
+#i3{
+
+   margin-left: 5vw;
+   width: 67vw;
+   margin-top: -2vw;
+  }
+   #lct,#lk
+  {
+
+      color: blue;
+  }
+  #b1
+  {
+    color: black;
+  }
+   #i4{
+
+   margin-left: -1vw;
+   width: 60vw;
+  }
+  #i1{
+
+   margin-left: 1vw;
+   width: 98vw;
+  }
+   #postimg
+ {
+     height=300;
+     width=300;
+      border-radius: 30px;
+ }
+ #id_comment
+{
+  height:5vh;
+  border-color: white;
+  /* 25px top, 10px right, 4px bottom and 35px left */
+
+  margin-left:0px;
+
+}
+#id_comment
+{
+    border:0px;
+    width:40vw;
+    height:3vw;
+
+}
+#fdimage
+{
+    margin-left:10vw;
+    width:35vw;
+     height:60vh;
+
+
+}
+
+
+@media only screen and (max-width: 900px) {
+    body{
+        background-color:white;
+    }
+
+    #i1{
+
+   margin-left: 1px;
+    margin-left: -11vw;
+   width: 99vw;
+   word-wrap: break-word;
+   margin-right:auto;
+
+   background-color:white;
+  }
+
+  #i2{
+      /**/
+      padding-top:0px;
+       padding-bottom:5px;
+      padding-left:0px;
+ margin-left: 0px;
+  margin-right:auto;
+
+   width: 99vw;
+    background-color :white;
+      border: 0px solid #565656;
+  border-radius: 20px;
+  word-wrap: break-word;
+
+    /*box-shadow: 2px 4px #565656;*/
+  }
+  #i4{
+
+   margin-left:-6vw;
+   width: 90vw;
+  }
+  #bt2
+  {
+
+          font-size :1em;
+          background-color:#38A1F3;
+  }
+     #b1
+  {
+      font-size :0.6em;
+
+  }
+  #fnt1
+  {
+      font-size:0.7em;
+
+  }
+  #lk
+  {
+      font-size :0.4em;
+  }
+  #at
+  {
+      font-size :0.5em;
+
+  }
+  #lct
+  {
+      font-size :0.5em;
+  }
+
+
+
+
+ #imgs
+ {
+     height=50vh;
+     width=70vw;
+ }
+#feedcmt
+{
+    font-size:0.5em;
+}
+
+#id_comment
+{
+    margin-left:2vw;
+    width:70vw;
+    height:10vw;
+    border:0px;
+    border-radius:30px;
+}
+#idc
+{
+    font-size:0.6em;
+}
+#bt2
+{
+    font-size:1.1em;
+        border-radius:30px;
+        background-color:#38A1F3;
+}
+#fdimage
+{
+    margin-left:0vw;
+    width:98.5vw;
+    height:50vh;
+}
+img
+{
+    border-radius:20px;
+}
+
+
+ }
+
+
+</style>
+<body>
+<!-- <div id = "i3" class="container text-center">
+<h1 id ="i4" class="container p-3 my-3 bg-dark text-white">POSTS</h1>
+</div> -->
+{% if messages %}
+<div class="alert alert-success alert-dismissible">
+  {% for message in messages %}
+    <p>{{ message }}</p>
+  {% endfor %}
+</div>
+{% endif %}
+
+<ul id="i1">
+<a href="{% url 'addpost' %}">
+<div id ="i2" class="jumbotron text-center">
+<br>
+ <h2 id="fnt1"><b>What's in your mind {{user.username}}</b></h2>
+ <p id="at">Click here to share your posts , stories , images , memes and views. You can delete it anytime you want. </p>
+</div>
+</a>
+</ul>
+<!--
+<ul id="i1">
+<a href="{% url 'updateprofile' %}">
+<div id ="i2" class="jumbotron text-center">
+<br>
+ <h2 id="fnt1"><b> {{user.username}} ,let your friend identify you</b></h2>
+ <p id="at">fill your detail and upload your nice profile image </p>
+</div>
+</a>
+</ul>
+<ul id="i1">
+<a href="{% url 'newscategory' %}">
+<div id ="i2" class="jumbotron text-center">
+<br>
+ <h2 id="fnt1"><b>NEWS </b></h2>
+ <p id="at">{{user.username}} ,you can see news of your choice on fricle. Click here for all news </p>
+</div>
+</a>
+</ul>
+-->
+  {% for feed in feeds %}
+
+  <ul id="i1">
+            <div id ="i2" class="jumbotron text-center">
+
+
+
+
+
+              {% if feed.image %}
+                <div id="fdimage"> <img  src="{{ feed.image.url }}" width="100%" height="100%"></div>
+
+                        {% endif %}
+
+                {% if feed.videofile %}
+
+                                  <video width='300' controls>
+                <source src='{{ feed.videofile.url }}' type='video/mp4'>
+                Your browser does not support the video tag.
+                </video>
+                <br>
+
+{% endif %}
+
+ {% if feed.link %}
+
+
+                                    {% if '.png' in feed.link %}
+                                         <div id="fdimage">  <img  src="{{feed.link}}" height="100%" width="100%"></div>
+                                    {% elif '.jpeg' in feed.link %}
+                                      <div id="fdimage">   <img  src="{{feed.link}}" height="100%" width="100%"></div>
+                                    {% elif '.gif' in feed.link %}
+                                      <div id="fdimage">   <img  src="{{feed.link}}"  height="100%" width="100%"></div>
+                                      {% elif 'https://qphs.fs.quoracdn.net/main-qimg' in feed.link %}
+                                      <div id="fdimage">   <img  src="{{feed.link}}"  height="100%" width="100%"></div>
+                                {% elif '.jpg' in feed.link %}
+                                      <div id="fdimage">   <img   src="{{feed.link}}" height="100%" width="100%">
+                                        </div>
+                                                    {% else %}
+
+                                     <a href="{{feed.link}}"id="lct" target="_blank">Visit link</a>
+
+                                    {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           {% endif %}
+
+
+ <h2 id="fnt1"><b>{{feed.title}} </b></h2><!-- way to highlight if impotant -->
+
+
+
+
+        {% if feed.description %}
+
+                    <p id="b1" >{{feed.description|urlizetrunc:1000}}</p>
+
+        {% endif %}
+        <p id="at">Posted by {{feed.user_new}}      |  {% if feed.created %}  {{feed.created}} {% endif %} |
+
+
+               {% ifequal feed.visibility True %}
+            Public post
+            {% endifequal %}
+            {% ifequal feed.visibility False %}
+            Private post
+            {% endifequal %}
+
+            </p>
+
+
+        <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         likes and comments
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+
+<!--content start -->
+  <div>
+
+
+                             <td ><nobr>
+                                        {% ifequal feed.user_new.username user.username  %}
+
+
+
+
+                                 <form method ="POST" action="{% url 'delete' feed.id %}">
+                                                          {% csrf_token %}
+
+                                                          <button class="btn btn-danger" type="Delete"  style="display:inline">Delete</button>
+                                                    </form>
+
+
+
+                            {% endifequal %}
+           &nbsp  <p id="lct"  style="display:inline">  {{feed.upvote}} like </p>  &nbsp
+                                       <p id="lk" style="display:inline">   liked by : {{feed.upvoter}}</p>
+
+                    </nobr>
+
+            </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <br>
+                <!--
+                {% if feed.comment %}<h6 id="idc" style="color:red" >Comments </h6>  <p id = "feedcmt">{{feed.comment}}</p> {% endif %}
+              -->
+            </div>
+
+
+
+
+<!-- end -->
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+      </div>
+
+
+
+
+
+
+<td>
+<nobr>
+
+
+
+
+
+
+
+
+                  <form action="{% url 'comment_post' feed.id %}"method="POST">
+                                    {% csrf_token %}
+                                    {{form3.comment}}
+
+                                    <button class="btn btn-info"type="submit" id="bt2"><i  class="fa fa-paper-plane"  aria-hidden="true"></i></button>
+                  </form>
+ 
+
+
+
+                                                                     <form method ="POST" action="{% url 'make_invisible_this_post' feed.id  %}">
+                                                          {% csrf_token %}
+
+                                                          <button  type="submit"  >
+
+
+                                                              <svg class="bi bi-hand-thumbs-up" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16v-1c.563 0 .901-.272 1.066-.56a.865.865 0 0 0 .121-.416c0-.12-.035-.165-.04-.17l-.354-.354.353-.354c.202-.201.407-.511.505-.804.104-.312.043-.441-.005-.488l-.353-.354.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315L12.793 9l.353-.354c.353-.352.373-.713.267-1.02-.122-.35-.396-.593-.571-.652-.653-.217-1.447-.224-2.11-.164a8.907 8.907 0 0 0-1.094.171l-.014.003-.003.001a.5.5 0 0 1-.595-.643 8.34 8.34 0 0 0 .145-4.726c-.03-.111-.128-.215-.288-.255l-.262-.065c-.306-.077-.642.156-.667.518-.075 1.082-.239 2.15-.482 2.85-.174.502-.603 1.268-1.238 1.977-.637.712-1.519 1.41-2.614 1.708-.394.108-.62.396-.62.65v4.002c0 .26.22.515.553.55 1.293.137 1.936.53 2.491.868l.04.025c.27.164.495.296.776.393.277.095.63.163 1.14.163h3.5v1H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+</svg>
+
+
+
+
+                                                              Make_Invisible</button>
+
+
+
+
+                                                    </form>
+                                                         <form method ="POST" action="{% url 'make_visible_this_post' feed.id  %}">
+                                                          {% csrf_token %}
+
+                                                          <button  type="submit"  >
+
+
+                                                              <svg class="bi bi-hand-thumbs-up" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16v-1c.563 0 .901-.272 1.066-.56a.865.865 0 0 0 .121-.416c0-.12-.035-.165-.04-.17l-.354-.354.353-.354c.202-.201.407-.511.505-.804.104-.312.043-.441-.005-.488l-.353-.354.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315L12.793 9l.353-.354c.353-.352.373-.713.267-1.02-.122-.35-.396-.593-.571-.652-.653-.217-1.447-.224-2.11-.164a8.907 8.907 0 0 0-1.094.171l-.014.003-.003.001a.5.5 0 0 1-.595-.643 8.34 8.34 0 0 0 .145-4.726c-.03-.111-.128-.215-.288-.255l-.262-.065c-.306-.077-.642.156-.667.518-.075 1.082-.239 2.15-.482 2.85-.174.502-.603 1.268-1.238 1.977-.637.712-1.519 1.41-2.614 1.708-.394.108-.62.396-.62.65v4.002c0 .26.22.515.553.55 1.293.137 1.936.53 2.491.868l.04.025c.27.164.495.296.776.393.277.095.63.163 1.14.163h3.5v1H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+</svg>
+
+
+
+
+                                                              Make_visible</button>
+
+
+
+
+                                                    </form>
+
+
+
+
+
+                  </nobr>
+                </td>
+
+
+
+
+
+</ul>
+
+{% endfor %}
+</body>
+{% endblock %}

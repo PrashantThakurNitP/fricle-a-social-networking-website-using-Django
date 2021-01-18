@@ -1,0 +1,447 @@
+
+
+
+{% extends 'posts/bootstrap.html' %}
+
+{% block content %}
+<!--
+{% if error %}
+<script type="text/javascript">
+  alert('{{error}}')
+</script>
+   {% endif %}
+
+-->
+<style type="text/css">
+  .d
+  {
+    display: flex
+      align-self: top;
+
+
+
+  }
+
+
+body {
+  /*background-image: url('https://cdn.dribbble.com/users/722246/screenshots/11096994/media/abcf2fe91c135bbaec19a3816dd0a992.gif');
+  background-repeat: repeat-y;
+  background-size: 100vw 100vh;
+  margin-top: 0vw;*/
+
+   background-color: #f8f8f8;
+  margin-top: 0vw;
+
+
+}
+#error
+{
+  color: red;
+}
+
+#t
+  {
+       background-color : #00acee;
+      color :white;
+      box-shadow: 2px 4px #565656;
+       margin-left: 0vw;
+      margin-top: 2vh;
+      width: 60vw;
+      border-radius:40px;
+  }
+
+ /*#t
+  {
+       background-color :#3F729B;
+      color :white;
+      box-shadow: 3px 6px #000066;
+      align-content: center;
+  }*/
+
+    #tit
+    {
+      margin-top: 5vh;
+      margin-left: 2vw;
+      color: white;
+      font-size: 2em;
+      border-radius:30px;
+    }
+       #id_receiver{
+        margin-top: 0vh;
+        margin-left: 15vw;
+        width :40vw;
+        height :10vh;
+        color:blue;
+        font-size:1.5em;
+        background-color :white;
+
+        border-radius:25px;
+    }
+    #des
+    {
+      margin-top: 16vh;
+      margin-left: 0vw;
+      color: white;
+      font-size: 2em;
+
+    }
+
+    #id_title{
+        margin-top:0vh;
+        margin-left:15vw;
+        width :40vw;
+        height :20vh;
+        font-size:1.5em;
+        background-color :white;
+        color :blue;
+        border-radius:25px;
+        border-width:1px;
+    }
+      #bt1
+  {
+    margin-top: 0vh;
+    margin-left :0vw;
+    font-size: 2em;
+    background-color:green;
+    color:white;
+    border-radius:10px;
+  }
+
+
+#i1
+{
+	margin-left: 0vw;
+	width: 70vw;
+	margin-top:10vw;
+}
+#i2
+{
+	margin-left: 10vw;
+	margin-top:0vw;
+	width: 70vw;
+	color: blue;
+}
+}
+ #i1
+  {
+       background-color :#00acee;
+      color :white;
+      box-shadow: 3px 6px #565656;
+      text-align :center;
+  }
+  #send1
+  {
+
+
+
+      color: #0066cc;
+      background-color: #ffe6e6;
+      border-radius:35px;
+       word-wrap: break-word;
+
+
+
+  }
+  #send1.p
+  {
+  	color: #004280;
+  }
+   #rec1
+  {
+
+
+
+      background-color :#e6f0ff;
+      color:#991f00;
+      border-radius:35px;
+       word-wrap: break-word;
+  }
+  #rec1.p
+  {
+
+  	 color:#990000;
+  }
+
+@media only screen and (max-width: 900px) {
+  #i1{
+
+   margin-left: 4vw;
+   width: 85vw;
+   font-size: 0.7em;
+   text-align: center;
+  }
+  #i2
+{
+    margin-left:0vw;
+	margin-top:30vw;
+	width: 90vw;
+	font-size: 0.5em;
+}
+
+ #send1
+  {
+
+
+        margin-left:0px;
+      color: #0066cc;
+      background-color: #ffe6e6;
+      border-radius:35px;
+
+
+
+  }
+    #rec1
+  {
+
+
+margin-left:0px;
+      background-color :#e6f0ff;
+      color:#991f00;
+      border-radius:35px;
+
+  }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+
+
+
+
+ #t
+    {
+      margin-left: 0vw;
+      margin-top: 0vh;
+        font-size:0.8em;
+         width: 60vw;
+      color :white;
+      box-shadow: 2px 4px ;
+    }
+
+
+
+
+     #tit
+    {
+      margin-top: 5vh;
+      margin-left: 0vw;
+      color: white;
+      font-size: 2em;
+    }
+       #id_receiver{
+        margin-top: 2vh;
+        margin-left: 0vw;
+        width :65vw;
+        height :15vw;
+        color:blue;
+        font-size:1.5em;
+        background-color :white;
+
+    }
+    #des
+    {
+      margin-top: 2vh;
+      margin-left: 0vw;
+      color: white;
+      font-size: 2em;
+
+    }
+
+    #id_title{
+        margin-top:0vh;
+        margin-left:2vw;
+        width :70vw;
+        height :30vw;
+        font-size:1em;
+        background-color :white;
+        color :blue;
+        border-width:1px;
+
+    }
+    #bt1
+  {
+      position:sticky;
+    margin-top: 0vw;
+    margin-left :1vw;
+    font-size: 1.5em;
+    background-color:#00acee;
+    color:white;
+  }
+
+
+/* message view */
+
+
+
+#i1
+{
+	margin-left: 0vw;
+	width: 70vw;
+	margin-top:10vw;
+}
+#i2
+{
+	margin-left: 0vw;
+	margin-top:0vw;
+	width: 90vw;
+	color: blue;
+}
+}
+ #i1
+  {margin-left:0px;
+       background-color :#00acee;
+      color :white;
+      box-shadow: 3px 6px #565656;
+      text-align :center;
+  }
+  #send1
+  {
+
+
+
+margin-left:0px;
+      color: #0066cc;
+      background-color: #ffe6e6;
+      border-radius:35px;
+
+
+
+  }
+  #send1.p
+  {
+  	color: #004280;
+  }
+   #rec1
+  {
+
+margin-left:0px;
+
+      background-color :#e6f0ff;
+      color:#991f00;
+      border-radius:35px;
+  }
+  #rec1.p
+  {
+
+  	 color:#990000;
+  }
+
+}
+/* end view*/
+</style>
+
+<div style="margin-left:10vw;" class="container text-center">
+<h2 id="t" class="alert alert-success">MESSENGER : {{usern}}</h2>
+</div>
+
+{% if messages %}
+<div class="alert alert-success alert-dismissible">
+  {% for message in messages %}
+    <p>{{ message }}</p>
+  {% endfor %}
+</div>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="d">
+
+<form method="POST">
+{% csrf_token %}
+
+
+            <!--     <h3 id="tit" >To</h3>
+                 <h4 style="color:#00acee"> {{usern}}<h4>
+-->
+               <!--  <h3 id="des" >Message</h3> -->
+               <td><nobr>
+                 {{form.title}}
+
+
+
+                    <button id="bt1" class="btn btn-success" type="submit"><i  class="fa fa-paper-plane"  aria-hidden="true"></i></button>
+</nobr>
+                    </td>
+                <!--  <button id="bt1" class="btn btn-success" type="submit">SEND</button> -->
+
+</form>
+</div>
+<!--- message view-->
+<br>
+
+<ul id="i2">
+
+
+{% for message  in mylist  %}
+
+
+			 {% if message.sender == user %}
+
+
+
+					<div  class="alert alert-warning" id = "send1">
+
+
+					{% if message.title %}
+				<p style="color: red">	{{message.sender}}(you)	: {{message.title|urlize}}</p>
+
+					{% endif %}
+
+
+				<!--	{% if message.receiver %}
+					<b><p style="color: red">Receiver :  {{message.receiver}}</p></b>
+					<br>
+					-->
+				<p style="color: red">	{{message.date1}} </p>
+
+						</div>
+
+
+					{% endif %}
+
+
+
+
+			 {% else %}
+
+					<div  class="alert alert-success" id = "rec1">
+
+					{% if message.title %}
+				<p style="color: blue">{{message.sender}} : {{message.title|urlize}}</p>
+
+					{% endif %}
+
+				<!--	{% if message.receiver %}
+					<b><p style="color: blue">Receiver :  {{message.receiver}} (you)<p/></b>
+					<br> -->
+				<p style="color: blue">	{{message.date1}}  </p>
+
+					</div>
+					{% endif %}
+
+				{% endif %}
+
+
+{% endfor %}
+
+
+
+
+</ul>
+<!---end-->
+
+
+
+
+{% endblock %}
