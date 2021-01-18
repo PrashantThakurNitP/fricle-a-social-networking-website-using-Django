@@ -27,7 +27,7 @@ Update profile including images
 
 News on various category by filtering topic from News Api
 
-Media query and flexbox for responsive webpage
+Media query and flexbox for responsive webpage ( Can enhance it futher using React or Angular web framework )
 
 Django ORM
 
